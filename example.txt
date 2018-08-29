@@ -1,0 +1,151 @@
+@auth_check all
+# se qualcosa da fare è troppa sbatta si può togliere
+'''
+in data ci sono email e password
+mi aspetto un json con il token da mettere nei cookies da ora in poi
+'''
+login post
+'''
+in data ci sono email password, in file c'è l'immagine
+logout post
+'''
+register post
+'''
+in data è possibile che ci siano nuovo username nuovo stato nuova immagine nuova password
+'''
+user post
+'''
+mi aspetto username link ad immagine e stato
+'''
+user get
+'''
+json con lista dei profili
+profiles = [
+    {
+      "title": "Burt Bear",
+      "id": "0",
+      "alerts": [1,6,5],
+      "color":"danger",
+    }
+  ];
+'''
+profiles get
+
+'''
+data json con title e description
+'''
+new/profile post
+
+'''
+json profile
+profile = {
+    "title":"Kin",
+    "desc": "massa10 mighty server",
+    "components":['nginx','drupal','linux','ubuntu'],
+    "team":{"title":"Team red", "id":"1"},
+  }
+'''
+profile/<profile_id> get
+
+'''
+in data un json con nuove desc components team
+'''
+profile/<profile_id> put
+
+profile/<profile_id> delete
+
+'''
+vulns = [
+    {
+      "title":"Drupal XSS",
+      "severity":"low",
+      "link":"http://archlinux.org",
+      "desc":"Misconfigure bla bla bla will bla bla bla",
+    }
+]
+'''
+vulns/<profile_id> get
+
+'''
+json con lista dei teams
+teams = [
+    {
+      "name": "Team red",
+      "id": "0",
+      "img":"assets/img/speakers/lion.jpg", # qui un link alla risorsa sul server o se no facciamo un link locale e amen
+      "profile":["<profile name>", 0],
+      "notifications":2,
+    }
+  ];
+'''
+teams get
+
+'''
+team = {
+    "name": "Team red",
+    "id": "0",
+    "description": "team description"
+  }
+'''
+team/<team_id> get
+
+'''
+tasks = [
+    {
+      "title": "Fix this",
+      "id": "0",
+      "icon": "build",
+      "color": "alert",
+    }
+  ];
+'''
+team/<team_id>/tasks get
+
+'''
+members = [
+    {
+      "name": "Sarah",
+      "id": "0",
+      "img":"assets/img/sarah-avatar.png.jpeg",
+      "state": "working",
+    }]
+'''
+team/<team_id>/members get
+'''
+json con nuova desc
+'''
+team/<team_id> put
+'''
+json con nuova task
+'''
+team/<team_id>/task post
+
+team/<team_id> delete
+
+'''
+in data json con nome e severity
+'''
+task post
+
+'''
+json con lista dei alerts
+alerts = [
+    {
+      "rel": "task",
+      "rel-id": "0",
+      "id": "0",
+      "icon": "alert",
+      "color": "alert",
+      "description":"Alert from a task",
+    }
+  ];
+'''
+
+alerts get
+
+'''
+mi mancano ancora un paio di endpoint tipo
+task get
+task put
+e qualcosa per addare la gente ai gruppi
+'''
